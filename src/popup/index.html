@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Danmaku Brightness Settings</title>
+    <script src="./index.ts" type="module"></script>
+    <style>
+        body {
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .config-item {
+            margin: 6px 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .config-item label {
+            margin-bottom: 4px;
+        }
+        .config-item.row {
+            flex-direction: row;
+            align-items: center;
+        }
+        .inline-item {
+            display: flex;
+            align-items: center;
+        }
+        .inline-item input {
+            width: 100%;
+        }
+        .inline-item > :not(input) {
+            flex-shrink: 0;
+            margin-left: 8px;
+        }
+        .title {
+            font-size: 1.4em;
+            margin-bottom: 12px;
+        }
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none!important;
+  width: 40px!important;
+  height: 20px!important;
+  outline: none!important;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  background-color: var(--background);
+  border-radius: 7.5px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 5px;
+  top: 2.5px;
+}
+
+input[type="checkbox"]::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #aaa;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: .2s;
+}
+input[type="checkbox"]:checked::after {
+    left: 20px;
+    background-color: #0096bf;
+}
+    </style>
+    <link rel="stylesheet" href="water.css">
+</head>
+
+<body>
+    <header class="title">
+        Bangumi Replace Source
+    </header>
+    <button id="selectVideo">选择视频</button>
+    <button id="removeVideo">恢复视频</button>
+    
+</body>
+
+</html>
